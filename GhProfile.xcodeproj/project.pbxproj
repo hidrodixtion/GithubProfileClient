@@ -19,6 +19,7 @@
 		7970DFA0261574820094B1D8 /* GetRepositories.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7970DF9F261574820094B1D8 /* GetRepositories.graphql */; };
 		7970DFB326157A7D0094B1D8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DFB226157A7D0094B1D8 /* API.swift */; };
 		7970DFBA26158DCB0094B1D8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DFB926158DCB0094B1D8 /* ProfileViewController.swift */; };
+		7970DFC726159FF50094B1D8 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DFC626159FF50094B1D8 /* RepositoryCell.swift */; };
 		91E8E713CFDBBE2F9A8A5F44 /* Pods_GhProfile_GhProfileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904EE4DAA6674D2541885C52 /* Pods_GhProfile_GhProfileUITests.framework */; };
 		94E550C3C8C99EB3D6E8E925 /* Pods_GhProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E0288DF8E688C81D37A9FC /* Pods_GhProfile.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		7970DF9F261574820094B1D8 /* GetRepositories.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetRepositories.graphql; sourceTree = "<group>"; };
 		7970DFB226157A7D0094B1D8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		7970DFB926158DCB0094B1D8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7970DFC626159FF50094B1D8 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		7DA19C7111F767A36B7D3375 /* Pods-GhProfileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhProfileTests.debug.xcconfig"; path = "Target Support Files/Pods-GhProfileTests/Pods-GhProfileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		904EE4DAA6674D2541885C52 /* Pods_GhProfile_GhProfileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhProfile_GhProfileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD481BF47E750458ED02ABF3 /* Pods-GhProfile-GhProfileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhProfile-GhProfileUITests.release.xcconfig"; path = "Target Support Files/Pods-GhProfile-GhProfileUITests/Pods-GhProfile-GhProfileUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				7970DFB926158DCB0094B1D8 /* ProfileViewController.swift */,
+				7970DFC626159FF50094B1D8 /* RepositoryCell.swift */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7970DFC726159FF50094B1D8 /* RepositoryCell.swift in Sources */,
 				7970DF5226154B610094B1D8 /* ViewController.swift in Sources */,
 				7970DFB326157A7D0094B1D8 /* API.swift in Sources */,
 				7970DFBA26158DCB0094B1D8 /* ProfileViewController.swift in Sources */,
