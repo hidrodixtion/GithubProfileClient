@@ -1,0 +1,10 @@
+query GetRepositories {
+  user(login: "sindresorhus") {
+    repositories(first:10, orderBy: {field:STARGAZERS, direction:DESC}) {
+      nodes {
+        name
+        stargazerCount
+      }
+    }
+  }
+}

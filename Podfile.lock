@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: b04cdabf7b66bb0b00513cabd1b467b276c67cb4
+PODS:
+  - Apollo (0.39.0):
+    - Apollo/Core (= 0.39.0)
+  - Apollo/Core (0.39.0)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - Apollo
+  - SnapKit (~> 5.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Apollo
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Apollo: f6c6410ebee82dd5846be87b81cedc8bc7754a82
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 9c0ffa43e2c6de3acdcd43d1edc6d976a8d65589
 
 COCOAPODS: 1.10.1

@@ -3,19 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		340C51746AC9D81FC122B2E4 /* Pods_GhProfileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B203AE9D0729EAFD9E31CEA /* Pods_GhProfileTests.framework */; };
 		7970DF4E26154B610094B1D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DF4D26154B610094B1D8 /* AppDelegate.swift */; };
-		7970DF5026154B610094B1D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DF4F26154B610094B1D8 /* SceneDelegate.swift */; };
 		7970DF5226154B610094B1D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DF5126154B610094B1D8 /* ViewController.swift */; };
 		7970DF5526154B610094B1D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7970DF5326154B610094B1D8 /* Main.storyboard */; };
 		7970DF5726154B620094B1D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7970DF5626154B620094B1D8 /* Assets.xcassets */; };
 		7970DF5A26154B620094B1D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7970DF5826154B620094B1D8 /* LaunchScreen.storyboard */; };
 		7970DF6526154B620094B1D8 /* GhProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DF6426154B620094B1D8 /* GhProfileTests.swift */; };
 		7970DF7026154B620094B1D8 /* GhProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DF6F26154B620094B1D8 /* GhProfileUITests.swift */; };
+		7970DF98261574070094B1D8 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 7970DF97261574070094B1D8 /* schema.json */; };
+		7970DFA0261574820094B1D8 /* GetRepositories.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7970DF9F261574820094B1D8 /* GetRepositories.graphql */; };
+		7970DFB326157A7D0094B1D8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DFB226157A7D0094B1D8 /* API.swift */; };
+		7970DFBA26158DCB0094B1D8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DFB926158DCB0094B1D8 /* ProfileViewController.swift */; };
 		91E8E713CFDBBE2F9A8A5F44 /* Pods_GhProfile_GhProfileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904EE4DAA6674D2541885C52 /* Pods_GhProfile_GhProfileUITests.framework */; };
 		94E550C3C8C99EB3D6E8E925 /* Pods_GhProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E0288DF8E688C81D37A9FC /* Pods_GhProfile.framework */; };
 /* End PBXBuildFile section */
@@ -45,7 +48,6 @@
 		61E0288DF8E688C81D37A9FC /* Pods_GhProfile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhProfile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7970DF4A26154B610094B1D8 /* GhProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7970DF4D26154B610094B1D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7970DF4F26154B610094B1D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7970DF5126154B610094B1D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7970DF5426154B610094B1D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7970DF5626154B620094B1D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +59,10 @@
 		7970DF6B26154B620094B1D8 /* GhProfileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhProfileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7970DF6F26154B620094B1D8 /* GhProfileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhProfileUITests.swift; sourceTree = "<group>"; };
 		7970DF7126154B620094B1D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7970DF97261574070094B1D8 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		7970DF9F261574820094B1D8 /* GetRepositories.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetRepositories.graphql; sourceTree = "<group>"; };
+		7970DFB226157A7D0094B1D8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		7970DFB926158DCB0094B1D8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7DA19C7111F767A36B7D3375 /* Pods-GhProfileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhProfileTests.debug.xcconfig"; path = "Target Support Files/Pods-GhProfileTests/Pods-GhProfileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		904EE4DAA6674D2541885C52 /* Pods_GhProfile_GhProfileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhProfile_GhProfileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD481BF47E750458ED02ABF3 /* Pods-GhProfile-GhProfileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhProfile-GhProfileUITests.release.xcconfig"; path = "Target Support Files/Pods-GhProfile-GhProfileUITests/Pods-GhProfile-GhProfileUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,8 +122,10 @@
 		7970DF4C26154B610094B1D8 /* GhProfile */ = {
 			isa = PBXGroup;
 			children = (
+				7970DF96261573E80094B1D8 /* graphql */,
+				7970DFB726158D3A0094B1D8 /* view */,
+				7970DFB226157A7D0094B1D8 /* API.swift */,
 				7970DF4D26154B610094B1D8 /* AppDelegate.swift */,
-				7970DF4F26154B610094B1D8 /* SceneDelegate.swift */,
 				7970DF5126154B610094B1D8 /* ViewController.swift */,
 				7970DF5326154B610094B1D8 /* Main.storyboard */,
 				7970DF5626154B620094B1D8 /* Assets.xcassets */,
@@ -143,6 +151,31 @@
 				7970DF7126154B620094B1D8 /* Info.plist */,
 			);
 			path = GhProfileUITests;
+			sourceTree = "<group>";
+		};
+		7970DF96261573E80094B1D8 /* graphql */ = {
+			isa = PBXGroup;
+			children = (
+				7970DF97261574070094B1D8 /* schema.json */,
+				7970DF9F261574820094B1D8 /* GetRepositories.graphql */,
+			);
+			path = graphql;
+			sourceTree = "<group>";
+		};
+		7970DFB726158D3A0094B1D8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7970DFB826158D420094B1D8 /* profile */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		7970DFB826158D420094B1D8 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				7970DFB926158DCB0094B1D8 /* ProfileViewController.swift */,
+			);
+			path = profile;
 			sourceTree = "<group>";
 		};
 		984A8327057EB7CB04982FF7 /* Frameworks */ = {
@@ -179,6 +212,8 @@
 				7970DF4626154B610094B1D8 /* Sources */,
 				7970DF4726154B610094B1D8 /* Frameworks */,
 				7970DF4826154B610094B1D8 /* Resources */,
+				0C58547917CA2A8A37C27E40 /* [CP] Embed Pods Frameworks */,
+				7970DFA4261574960094B1D8 /* Generate Graphql Helper */,
 			);
 			buildRules = (
 			);
@@ -216,6 +251,7 @@
 				7970DF6726154B620094B1D8 /* Sources */,
 				7970DF6826154B620094B1D8 /* Frameworks */,
 				7970DF6926154B620094B1D8 /* Resources */,
+				346CAB73EE6F22BE30C9B0FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,9 +310,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7970DF98261574070094B1D8 /* schema.json in Resources */,
 				7970DF5A26154B620094B1D8 /* LaunchScreen.storyboard in Resources */,
 				7970DF5726154B620094B1D8 /* Assets.xcassets in Resources */,
 				7970DF5526154B610094B1D8 /* Main.storyboard in Resources */,
+				7970DFA0261574820094B1D8 /* GetRepositories.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +335,58 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0C58547917CA2A8A37C27E40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GhProfile/Pods-GhProfile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GhProfile/Pods-GhProfile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GhProfile/Pods-GhProfile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		346CAB73EE6F22BE30C9B0FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GhProfile-GhProfileUITests/Pods-GhProfile-GhProfileUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GhProfile-GhProfileUITests/Pods-GhProfile-GhProfileUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GhProfile-GhProfileUITests/Pods-GhProfile-GhProfileUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7970DFA4261574960094B1D8 /* Generate Graphql Helper */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Graphql Helper";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"./graphql/schema.json\" API.swift\n";
+		};
 		B39014CFA17BE6E9EF78F460 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,8 +461,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7970DF5226154B610094B1D8 /* ViewController.swift in Sources */,
+				7970DFB326157A7D0094B1D8 /* API.swift in Sources */,
+				7970DFBA26158DCB0094B1D8 /* ProfileViewController.swift in Sources */,
 				7970DF4E26154B610094B1D8 /* AppDelegate.swift in Sources */,
-				7970DF5026154B610094B1D8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
