@@ -12,5 +12,6 @@ protocol Repo {
     /// Get Pinned Repository from user: Sindresorhus
     func getPinnedRepository(callback: @escaping ([RepositoryModel]?, Error?) -> Void)
     
-    
+    /// Get login detail
+    func getLoginDetail(callback: @escaping (User?, Error?) -> Void)
 }

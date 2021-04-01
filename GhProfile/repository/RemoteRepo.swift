@@ -30,4 +30,21 @@ class RemoteRepo: Repo {
             }
         }
     }
+    
+    func getLoginDetail(callback: @escaping (User?, Error?) -> Void) {
+        Service.shared.apollo.fetch(query: GetProfileQuery()) { (response) in
+            switch response {
+            case .success(let result):
+                if let node = result.data?.user {
+                    callback(User(avatarUrl: node.avatarUrl, login: node.login,
+                                  name: node.name ?? "", email: node.email,
+                                  follower: node.followers.totalCount, following: node.following.totalCount), nil)
+                } else {
+                    callback(nil, RequestError.noData)
+                }
+            case .failure(let error):
+                callback(nil, error)
+            }
+        }
+    }
 }

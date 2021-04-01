@@ -24,9 +24,22 @@ class ProfilePresenter {
             }
             
             if let list = list {
-                self.delegate?.onDataFetched(list: list)
+                self.delegate?.onPinnedRepositoryFetched(list: list)
             } else {
-                self.delegate?.onDataFetched(list: [])
+                self.delegate?.onPinnedRepositoryFetched(list: [])
+            }
+        }
+    }
+    
+    func fetchProfile() {
+        repo.getLoginDetail { [unowned self] (user, error) in
+            if let error = error {
+                self.delegate?.onError(error: error)
+                return
+            }
+            
+            if let user = user {
+                self.delegate?.onUserDataFetched(user: user)
             }
         }
     }
@@ -34,7 +47,9 @@ class ProfilePresenter {
 
 protocol ProfilePresenterDelegate {
     /// When data is fetched completely
-    func onDataFetched(list: [RepositoryModel])
+    func onPinnedRepositoryFetched(list: [RepositoryModel])
+    /// When user detail is fetched completely
+    func onUserDataFetched(user: User)
     /// When there's error
     func onError(error: Error)
 }

@@ -51,7 +51,6 @@ class RepositoryCell: UITableViewCell {
         }
         
         lblSubtitle = UILabel()
-        lblSubtitle.font = UIFont.systemFont(ofSize: 16)
         lblSubtitle.numberOfLines = 2
         border.addSubview(lblSubtitle)
         lblSubtitle.snp.makeConstraints { (make) in

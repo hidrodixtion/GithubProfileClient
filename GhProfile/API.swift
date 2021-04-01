@@ -320,6 +320,240 @@ public final class GetPinnedRepositoriesQuery: GraphQLQuery {
   }
 }
 
+public final class GetProfileQuery: GraphQLQuery {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    query GetProfile {
+      user(login: "sindresorhus") {
+        __typename
+        avatarUrl
+        login
+        name
+        email
+        followers {
+          __typename
+          totalCount
+        }
+        following {
+          __typename
+          totalCount
+        }
+      }
+    }
+    """
+
+  public let operationName: String = "GetProfile"
+
+  public init() {
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["Query"]
+
+    public static var selections: [GraphQLSelection] {
+      return [
+        GraphQLField("user", arguments: ["login": "sindresorhus"], type: .object(User.selections)),
+      ]
+    }
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(user: User? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Query", "user": user.flatMap { (value: User) -> ResultMap in value.resultMap }])
+    }
+
+    /// Lookup a user by login.
+    public var user: User? {
+      get {
+        return (resultMap["user"] as? ResultMap).flatMap { User(unsafeResultMap: $0) }
+      }
+      set {
+        resultMap.updateValue(newValue?.resultMap, forKey: "user")
+      }
+    }
+
+    public struct User: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["User"]
+
+      public static var selections: [GraphQLSelection] {
+        return [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("avatarUrl", type: .nonNull(.scalar(String.self))),
+          GraphQLField("login", type: .nonNull(.scalar(String.self))),
+          GraphQLField("name", type: .scalar(String.self)),
+          GraphQLField("email", type: .nonNull(.scalar(String.self))),
+          GraphQLField("followers", type: .nonNull(.object(Follower.selections))),
+          GraphQLField("following", type: .nonNull(.object(Following.selections))),
+        ]
+      }
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(avatarUrl: String, login: String, name: String? = nil, email: String, followers: Follower, following: Following) {
+        self.init(unsafeResultMap: ["__typename": "User", "avatarUrl": avatarUrl, "login": login, "name": name, "email": email, "followers": followers.resultMap, "following": following.resultMap])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      /// A URL pointing to the user's public avatar.
+      public var avatarUrl: String {
+        get {
+          return resultMap["avatarUrl"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "avatarUrl")
+        }
+      }
+
+      /// The username used to login.
+      public var login: String {
+        get {
+          return resultMap["login"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "login")
+        }
+      }
+
+      /// The user's public profile name.
+      public var name: String? {
+        get {
+          return resultMap["name"] as? String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "name")
+        }
+      }
+
+      /// The user's publicly visible profile email.
+      public var email: String {
+        get {
+          return resultMap["email"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "email")
+        }
+      }
+
+      /// A list of users the given user is followed by.
+      public var followers: Follower {
+        get {
+          return Follower(unsafeResultMap: resultMap["followers"]! as! ResultMap)
+        }
+        set {
+          resultMap.updateValue(newValue.resultMap, forKey: "followers")
+        }
+      }
+
+      /// A list of users the given user is following.
+      public var following: Following {
+        get {
+          return Following(unsafeResultMap: resultMap["following"]! as! ResultMap)
+        }
+        set {
+          resultMap.updateValue(newValue.resultMap, forKey: "following")
+        }
+      }
+
+      public struct Follower: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["FollowerConnection"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("totalCount", type: .nonNull(.scalar(Int.self))),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(totalCount: Int) {
+          self.init(unsafeResultMap: ["__typename": "FollowerConnection", "totalCount": totalCount])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        /// Identifies the total count of items in the connection.
+        public var totalCount: Int {
+          get {
+            return resultMap["totalCount"]! as! Int
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "totalCount")
+          }
+        }
+      }
+
+      public struct Following: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["FollowingConnection"]
+
+        public static var selections: [GraphQLSelection] {
+          return [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("totalCount", type: .nonNull(.scalar(Int.self))),
+          ]
+        }
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(totalCount: Int) {
+          self.init(unsafeResultMap: ["__typename": "FollowingConnection", "totalCount": totalCount])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        /// Identifies the total count of items in the connection.
+        public var totalCount: Int {
+          get {
+            return resultMap["totalCount"]! as! Int
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "totalCount")
+          }
+        }
+      }
+    }
+  }
+}
+
 public final class GetRepositoriesQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =

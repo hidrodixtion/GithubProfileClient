@@ -1,0 +1,14 @@
+query GetProfile {
+  user(login: "sindresorhus") {
+    avatarUrl
+    login
+    name
+    email
+    followers {
+        totalCount
+    }
+    following {
+        totalCount
+    }
+  }
+}
