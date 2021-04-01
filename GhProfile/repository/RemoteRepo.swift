@@ -21,7 +21,7 @@ class RemoteRepo: Repo {
                                                                                 color: primaryLanguage?.color ?? "#FFFFFF"))
                     }
                     
-                    RepoUtil.saveLastFetched(key: RepoUtil.kLastFetchedPinnedRepo, date: Date())
+                    LocalRepo().savePinnedRepositories(list: list)
                     
                     callback(list, nil)
                 } else {
@@ -38,9 +38,13 @@ class RemoteRepo: Repo {
             switch response {
             case .success(let result):
                 if let node = result.data?.user {
-                    callback(User(avatarUrl: node.avatarUrl, login: node.login,
-                                  name: node.name ?? "", email: node.email,
-                                  follower: node.followers.totalCount, following: node.following.totalCount), nil)
+                    let user = User(avatarUrl: node.avatarUrl, login: node.login,
+                                    name: node.name ?? "", email: node.email,
+                                    follower: node.followers.totalCount, following: node.following.totalCount)
+                    
+                    LocalRepo().saveLoginDetail(user: user)
+                    
+                    callback(user, nil)
                 } else {
                     callback(nil, RequestError.noData)
                 }

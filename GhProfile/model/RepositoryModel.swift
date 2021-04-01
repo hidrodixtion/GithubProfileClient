@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RepositoryModel {
+struct RepositoryModel: Codable {
     let name: String
     let description: String
     let starCount: Int
@@ -19,7 +19,7 @@ struct RepositoryModel {
     }
 }
 
-struct PrimaryLanguage {
+struct PrimaryLanguage: Codable {
     let name: String
     let color: String
 }

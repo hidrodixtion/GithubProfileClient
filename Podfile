@@ -9,6 +9,7 @@ target 'GhProfile' do
   pod "Apollo"
   pod 'SnapKit', '~> 5.0.0'
   pod 'Kingfisher', '~> 6.0'
+  pod 'Shallows', '~> 0.10.0'
 
   target 'GhProfileTests' do
     inherit! :search_paths

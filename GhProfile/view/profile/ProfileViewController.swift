@@ -27,7 +27,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = ProfilePresenter(repo: RemoteRepo())
+        presenter = ProfilePresenter(repo: AppRepository())
         presenter.delegate = self
 
         setupView()
