@@ -16,7 +16,11 @@ class ProfilePresenter {
         self.repo = repo
     }
     
-    func fetchPinnedRepository() {
+    func fetchPinnedRepository(forceFetch: Bool = false) {
+        if forceFetch {
+            RepoUtil.saveLastFetched(key: RepoUtil.kLastFetchedPinnedRepo, date: Date(timeIntervalSince1970: 0))
+        }
+        
         repo.getPinnedRepository { [unowned self] (list, error) in
             if let error = error {
                 self.delegate?.onError(error: error)

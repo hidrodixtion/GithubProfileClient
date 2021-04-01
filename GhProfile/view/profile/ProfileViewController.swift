@@ -23,6 +23,7 @@ class ProfileViewController: UIViewController {
     var lblEmail: UILabel!
     var lblFollower: UILabel!
     var lblFollowing: UILabel!
+    var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,6 +119,16 @@ class ProfileViewController: UIViewController {
             make.right.equalTo(view)
             make.bottom.equalTo(view).offset(-16)
         }
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull To Refresh!")
+        refreshControl.addTarget(self, action: #selector(forceRefresh), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    @objc func forceRefresh() {
+        presenter.fetchPinnedRepository(forceFetch: true)
+        refreshControl.endRefreshing()
     }
 }
 
