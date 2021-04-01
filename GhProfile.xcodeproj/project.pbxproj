@@ -31,6 +31,8 @@
 		79D411962615E16900EBE41B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D411952615E16900EBE41B /* User.swift */; };
 		79D4119B2615EA0700EBE41B /* GetProfile.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 79D4119A2615EA0700EBE41B /* GetProfile.graphql */; };
 		79D411B42615F5A500EBE41B /* RepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D411B32615F5A500EBE41B /* RepositoryMock.swift */; };
+		79D411C02615FFEF00EBE41B /* LocalRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D411BF2615FFEF00EBE41B /* LocalRepo.swift */; };
+		79D411C52616004900EBE41B /* RepoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D411C42616004900EBE41B /* RepoUtil.swift */; };
 		91E8E713CFDBBE2F9A8A5F44 /* Pods_GhProfile_GhProfileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904EE4DAA6674D2541885C52 /* Pods_GhProfile_GhProfileUITests.framework */; };
 		94E550C3C8C99EB3D6E8E925 /* Pods_GhProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E0288DF8E688C81D37A9FC /* Pods_GhProfile.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +89,8 @@
 		79D411952615E16900EBE41B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		79D4119A2615EA0700EBE41B /* GetProfile.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetProfile.graphql; sourceTree = "<group>"; };
 		79D411B32615F5A500EBE41B /* RepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMock.swift; sourceTree = "<group>"; };
+		79D411BF2615FFEF00EBE41B /* LocalRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepo.swift; sourceTree = "<group>"; };
+		79D411C42616004900EBE41B /* RepoUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoUtil.swift; sourceTree = "<group>"; };
 		7DA19C7111F767A36B7D3375 /* Pods-GhProfileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhProfileTests.debug.xcconfig"; path = "Target Support Files/Pods-GhProfileTests/Pods-GhProfileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		904EE4DAA6674D2541885C52 /* Pods_GhProfile_GhProfileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhProfile_GhProfileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD481BF47E750458ED02ABF3 /* Pods-GhProfile-GhProfileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhProfile-GhProfileUITests.release.xcconfig"; path = "Target Support Files/Pods-GhProfile-GhProfileUITests/Pods-GhProfile-GhProfileUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +220,8 @@
 				7970DFCC2615AEF50094B1D8 /* Service.swift */,
 				7970DFD62615B2030094B1D8 /* RemoteRepo.swift */,
 				7970DFDB2615B20F0094B1D8 /* Repo.swift */,
+				79D411BF2615FFEF00EBE41B /* LocalRepo.swift */,
+				79D411C42616004900EBE41B /* RepoUtil.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -541,8 +547,10 @@
 				79D411742615B5DE00EBE41B /* ProfilePresenter.swift in Sources */,
 				79D4117B2615C46E00EBE41B /* RequestError.swift in Sources */,
 				7970DF4E26154B610094B1D8 /* AppDelegate.swift in Sources */,
+				79D411C52616004900EBE41B /* RepoUtil.swift in Sources */,
 				7970DFCD2615AEF50094B1D8 /* Service.swift in Sources */,
 				7970DFD72615B2030094B1D8 /* RemoteRepo.swift in Sources */,
+				79D411C02615FFEF00EBE41B /* LocalRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

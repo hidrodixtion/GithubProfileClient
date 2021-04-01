@@ -21,6 +21,8 @@ class RemoteRepo: Repo {
                                                                                 color: primaryLanguage?.color ?? "#FFFFFF"))
                     }
                     
+                    RepoUtil.saveLastFetched(key: RepoUtil.kLastFetchedPinnedRepo, date: Date())
+                    
                     callback(list, nil)
                 } else {
                     callback(nil, RequestError.noData)
@@ -47,4 +49,6 @@ class RemoteRepo: Repo {
             }
         }
     }
+    
+    
 }
