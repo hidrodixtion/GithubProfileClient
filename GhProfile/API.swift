@@ -19,6 +19,11 @@ public final class GetPinnedRepositoriesQuery: GraphQLQuery {
               name
               description
               stargazerCount
+              primaryLanguage {
+                __typename
+                name
+                color
+              }
             }
           }
         }
@@ -162,8 +167,8 @@ public final class GetPinnedRepositoriesQuery: GraphQLQuery {
             return Node(unsafeResultMap: ["__typename": "Gist"])
           }
 
-          public static func makeRepository(name: String, description: String? = nil, stargazerCount: Int) -> Node {
-            return Node(unsafeResultMap: ["__typename": "Repository", "name": name, "description": description, "stargazerCount": stargazerCount])
+          public static func makeRepository(name: String, description: String? = nil, stargazerCount: Int, primaryLanguage: AsRepository.PrimaryLanguage? = nil) -> Node {
+            return Node(unsafeResultMap: ["__typename": "Repository", "name": name, "description": description, "stargazerCount": stargazerCount, "primaryLanguage": primaryLanguage.flatMap { (value: AsRepository.PrimaryLanguage) -> ResultMap in value.resultMap }])
           }
 
           public var __typename: String {
@@ -195,6 +200,7 @@ public final class GetPinnedRepositoriesQuery: GraphQLQuery {
                 GraphQLField("name", type: .nonNull(.scalar(String.self))),
                 GraphQLField("description", type: .scalar(String.self)),
                 GraphQLField("stargazerCount", type: .nonNull(.scalar(Int.self))),
+                GraphQLField("primaryLanguage", type: .object(PrimaryLanguage.selections)),
               ]
             }
 
@@ -204,8 +210,8 @@ public final class GetPinnedRepositoriesQuery: GraphQLQuery {
               self.resultMap = unsafeResultMap
             }
 
-            public init(name: String, description: String? = nil, stargazerCount: Int) {
-              self.init(unsafeResultMap: ["__typename": "Repository", "name": name, "description": description, "stargazerCount": stargazerCount])
+            public init(name: String, description: String? = nil, stargazerCount: Int, primaryLanguage: PrimaryLanguage? = nil) {
+              self.init(unsafeResultMap: ["__typename": "Repository", "name": name, "description": description, "stargazerCount": stargazerCount, "primaryLanguage": primaryLanguage.flatMap { (value: PrimaryLanguage) -> ResultMap in value.resultMap }])
             }
 
             public var __typename: String {
@@ -244,6 +250,67 @@ public final class GetPinnedRepositoriesQuery: GraphQLQuery {
               }
               set {
                 resultMap.updateValue(newValue, forKey: "stargazerCount")
+              }
+            }
+
+            /// The primary language of the repository's code.
+            public var primaryLanguage: PrimaryLanguage? {
+              get {
+                return (resultMap["primaryLanguage"] as? ResultMap).flatMap { PrimaryLanguage(unsafeResultMap: $0) }
+              }
+              set {
+                resultMap.updateValue(newValue?.resultMap, forKey: "primaryLanguage")
+              }
+            }
+
+            public struct PrimaryLanguage: GraphQLSelectionSet {
+              public static let possibleTypes: [String] = ["Language"]
+
+              public static var selections: [GraphQLSelection] {
+                return [
+                  GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+                  GraphQLField("name", type: .nonNull(.scalar(String.self))),
+                  GraphQLField("color", type: .scalar(String.self)),
+                ]
+              }
+
+              public private(set) var resultMap: ResultMap
+
+              public init(unsafeResultMap: ResultMap) {
+                self.resultMap = unsafeResultMap
+              }
+
+              public init(name: String, color: String? = nil) {
+                self.init(unsafeResultMap: ["__typename": "Language", "name": name, "color": color])
+              }
+
+              public var __typename: String {
+                get {
+                  return resultMap["__typename"]! as! String
+                }
+                set {
+                  resultMap.updateValue(newValue, forKey: "__typename")
+                }
+              }
+
+              /// The name of the current language.
+              public var name: String {
+                get {
+                  return resultMap["name"]! as! String
+                }
+                set {
+                  resultMap.updateValue(newValue, forKey: "name")
+                }
+              }
+
+              /// The color defined for the current language.
+              public var color: String? {
+                get {
+                  return resultMap["color"] as? String
+                }
+                set {
+                  resultMap.updateValue(newValue, forKey: "color")
+                }
               }
             }
           }

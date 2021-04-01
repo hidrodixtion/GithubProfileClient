@@ -9,5 +9,8 @@ import Foundation
 import Apollo
 
 protocol Repo {
-    func getPinnedRepository(callback: @escaping ([GetPinnedRepositoriesQuery.Data.User.PinnedItem.Node.AsRepository?]?, Error?) -> Void)
+    /// Get Pinned Repository from user: Sindresorhus
+    func getPinnedRepository(callback: @escaping ([RepositoryModel]?, Error?) -> Void)
+    
+    
 }

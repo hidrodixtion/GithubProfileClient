@@ -6,6 +6,10 @@ query GetPinnedRepositories {
           name
           description
           stargazerCount
+          primaryLanguage {
+            name
+            color
+          }
         }
       }
     }

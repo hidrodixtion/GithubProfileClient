@@ -8,13 +8,17 @@
 import Foundation
 
 class RemoteRepo: Repo {
-    func getPinnedRepository(callback: @escaping ([GetPinnedRepositoriesQuery.Data.User.PinnedItem.Node.AsRepository?]?, Error?) -> Void) {
+    func getPinnedRepository(callback: @escaping ([RepositoryModel]?, Error?) -> Void) {
         Service.shared.apollo.fetch(query: GetPinnedRepositoriesQuery()) { (response) in
             switch response {
             case .success(let result):
                 if let nodes = result.data?.user?.pinnedItems.nodes {
-                    let list = nodes.compactMap({ $0 }).map { (node)in
-                        return node.asRepository
+                    let list = nodes.compactMap({ $0 }).filter({ $0.asRepository != nil }).map { (item) -> RepositoryModel in
+                        let toRepo = item.asRepository!
+                        let primaryLanguage = toRepo.primaryLanguage
+                        return RepositoryModel(name: toRepo.name, description: toRepo.description ?? "", starCount: toRepo.stargazerCount,
+                                               primaryLanguage: PrimaryLanguage(name: primaryLanguage?.name ?? "",
+                                                                                color: primaryLanguage?.color ?? "#FFFFFF"))
                     }
                     
                     callback(list, nil)
