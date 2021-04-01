@@ -10,10 +10,15 @@ import SnapKit
 
 class ProfileViewController: UIViewController {
 
+    var presenter: ProfilePresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter = ProfilePresenter(repo: RemoteRepo())
 
         setupView()
+        presenter.fetchPinnedRepository()
     }
     
     func setupView() {

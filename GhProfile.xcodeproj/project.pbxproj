@@ -20,6 +20,12 @@
 		7970DFB326157A7D0094B1D8 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DFB226157A7D0094B1D8 /* API.swift */; };
 		7970DFBA26158DCB0094B1D8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DFB926158DCB0094B1D8 /* ProfileViewController.swift */; };
 		7970DFC726159FF50094B1D8 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DFC626159FF50094B1D8 /* RepositoryCell.swift */; };
+		7970DFCD2615AEF50094B1D8 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DFCC2615AEF50094B1D8 /* Service.swift */; };
+		7970DFD22615B11A0094B1D8 /* GetPinnedRepositories.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7970DFD12615B11A0094B1D8 /* GetPinnedRepositories.graphql */; };
+		7970DFD72615B2030094B1D8 /* RemoteRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DFD62615B2030094B1D8 /* RemoteRepo.swift */; };
+		7970DFDC2615B20F0094B1D8 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DFDB2615B20F0094B1D8 /* Repo.swift */; };
+		79D411742615B5DE00EBE41B /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D411732615B5DE00EBE41B /* ProfilePresenter.swift */; };
+		79D4117B2615C46E00EBE41B /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4117A2615C46E00EBE41B /* RequestError.swift */; };
 		91E8E713CFDBBE2F9A8A5F44 /* Pods_GhProfile_GhProfileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904EE4DAA6674D2541885C52 /* Pods_GhProfile_GhProfileUITests.framework */; };
 		94E550C3C8C99EB3D6E8E925 /* Pods_GhProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E0288DF8E688C81D37A9FC /* Pods_GhProfile.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +71,12 @@
 		7970DFB226157A7D0094B1D8 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		7970DFB926158DCB0094B1D8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7970DFC626159FF50094B1D8 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		7970DFCC2615AEF50094B1D8 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		7970DFD12615B11A0094B1D8 /* GetPinnedRepositories.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetPinnedRepositories.graphql; sourceTree = "<group>"; };
+		7970DFD62615B2030094B1D8 /* RemoteRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepo.swift; sourceTree = "<group>"; };
+		7970DFDB2615B20F0094B1D8 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		79D411732615B5DE00EBE41B /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		79D4117A2615C46E00EBE41B /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		7DA19C7111F767A36B7D3375 /* Pods-GhProfileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhProfileTests.debug.xcconfig"; path = "Target Support Files/Pods-GhProfileTests/Pods-GhProfileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		904EE4DAA6674D2541885C52 /* Pods_GhProfile_GhProfileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhProfile_GhProfileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD481BF47E750458ED02ABF3 /* Pods-GhProfile-GhProfileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhProfile-GhProfileUITests.release.xcconfig"; path = "Target Support Files/Pods-GhProfile-GhProfileUITests/Pods-GhProfile-GhProfileUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +136,8 @@
 		7970DF4C26154B610094B1D8 /* GhProfile */ = {
 			isa = PBXGroup;
 			children = (
+				79D411782615C41D00EBE41B /* model */,
+				7970DFCB2615AEE20094B1D8 /* repository */,
 				7970DF96261573E80094B1D8 /* graphql */,
 				7970DFB726158D3A0094B1D8 /* view */,
 				7970DFB226157A7D0094B1D8 /* API.swift */,
@@ -160,6 +174,7 @@
 			children = (
 				7970DF97261574070094B1D8 /* schema.json */,
 				7970DF9F261574820094B1D8 /* GetRepositories.graphql */,
+				7970DFD12615B11A0094B1D8 /* GetPinnedRepositories.graphql */,
 			);
 			path = graphql;
 			sourceTree = "<group>";
@@ -177,8 +192,27 @@
 			children = (
 				7970DFB926158DCB0094B1D8 /* ProfileViewController.swift */,
 				7970DFC626159FF50094B1D8 /* RepositoryCell.swift */,
+				79D411732615B5DE00EBE41B /* ProfilePresenter.swift */,
 			);
 			path = profile;
+			sourceTree = "<group>";
+		};
+		7970DFCB2615AEE20094B1D8 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				7970DFCC2615AEF50094B1D8 /* Service.swift */,
+				7970DFD62615B2030094B1D8 /* RemoteRepo.swift */,
+				7970DFDB2615B20F0094B1D8 /* Repo.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		79D411782615C41D00EBE41B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				79D4117A2615C46E00EBE41B /* RequestError.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		984A8327057EB7CB04982FF7 /* Frameworks */ = {
@@ -314,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7970DF98261574070094B1D8 /* schema.json in Resources */,
+				7970DFD22615B11A0094B1D8 /* GetPinnedRepositories.graphql in Resources */,
 				7970DF5A26154B620094B1D8 /* LaunchScreen.storyboard in Resources */,
 				7970DF5726154B620094B1D8 /* Assets.xcassets in Resources */,
 				7970DF5526154B610094B1D8 /* Main.storyboard in Resources */,
@@ -466,8 +501,13 @@
 				7970DFC726159FF50094B1D8 /* RepositoryCell.swift in Sources */,
 				7970DF5226154B610094B1D8 /* ViewController.swift in Sources */,
 				7970DFB326157A7D0094B1D8 /* API.swift in Sources */,
+				7970DFDC2615B20F0094B1D8 /* Repo.swift in Sources */,
 				7970DFBA26158DCB0094B1D8 /* ProfileViewController.swift in Sources */,
+				79D411742615B5DE00EBE41B /* ProfilePresenter.swift in Sources */,
+				79D4117B2615C46E00EBE41B /* RequestError.swift in Sources */,
 				7970DF4E26154B610094B1D8 /* AppDelegate.swift in Sources */,
+				7970DFCD2615AEF50094B1D8 /* Service.swift in Sources */,
+				7970DFD72615B2030094B1D8 /* RemoteRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
