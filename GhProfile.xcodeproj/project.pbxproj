@@ -13,7 +13,7 @@
 		7970DF5526154B610094B1D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7970DF5326154B610094B1D8 /* Main.storyboard */; };
 		7970DF5726154B620094B1D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7970DF5626154B620094B1D8 /* Assets.xcassets */; };
 		7970DF5A26154B620094B1D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7970DF5826154B620094B1D8 /* LaunchScreen.storyboard */; };
-		7970DF6526154B620094B1D8 /* GhProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DF6426154B620094B1D8 /* GhProfileTests.swift */; };
+		7970DF6526154B620094B1D8 /* ProfilePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DF6426154B620094B1D8 /* ProfilePresenterTests.swift */; };
 		7970DF7026154B620094B1D8 /* GhProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7970DF6F26154B620094B1D8 /* GhProfileUITests.swift */; };
 		7970DF98261574070094B1D8 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 7970DF97261574070094B1D8 /* schema.json */; };
 		7970DFA0261574820094B1D8 /* GetRepositories.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 7970DF9F261574820094B1D8 /* GetRepositories.graphql */; };
@@ -30,6 +30,7 @@
 		79D4118E2615DC7A00EBE41B /* Ext+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4118D2615DC7A00EBE41B /* Ext+String.swift */; };
 		79D411962615E16900EBE41B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D411952615E16900EBE41B /* User.swift */; };
 		79D4119B2615EA0700EBE41B /* GetProfile.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 79D4119A2615EA0700EBE41B /* GetProfile.graphql */; };
+		79D411B42615F5A500EBE41B /* RepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D411B32615F5A500EBE41B /* RepositoryMock.swift */; };
 		91E8E713CFDBBE2F9A8A5F44 /* Pods_GhProfile_GhProfileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904EE4DAA6674D2541885C52 /* Pods_GhProfile_GhProfileUITests.framework */; };
 		94E550C3C8C99EB3D6E8E925 /* Pods_GhProfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E0288DF8E688C81D37A9FC /* Pods_GhProfile.framework */; };
 /* End PBXBuildFile section */
@@ -65,7 +66,7 @@
 		7970DF5926154B620094B1D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7970DF5B26154B620094B1D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7970DF6026154B620094B1D8 /* GhProfileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhProfileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7970DF6426154B620094B1D8 /* GhProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhProfileTests.swift; sourceTree = "<group>"; };
+		7970DF6426154B620094B1D8 /* ProfilePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenterTests.swift; sourceTree = "<group>"; };
 		7970DF6626154B620094B1D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7970DF6B26154B620094B1D8 /* GhProfileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhProfileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7970DF6F26154B620094B1D8 /* GhProfileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhProfileUITests.swift; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		79D4118D2615DC7A00EBE41B /* Ext+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+String.swift"; sourceTree = "<group>"; };
 		79D411952615E16900EBE41B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		79D4119A2615EA0700EBE41B /* GetProfile.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetProfile.graphql; sourceTree = "<group>"; };
+		79D411B32615F5A500EBE41B /* RepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMock.swift; sourceTree = "<group>"; };
 		7DA19C7111F767A36B7D3375 /* Pods-GhProfileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhProfileTests.debug.xcconfig"; path = "Target Support Files/Pods-GhProfileTests/Pods-GhProfileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		904EE4DAA6674D2541885C52 /* Pods_GhProfile_GhProfileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhProfile_GhProfileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD481BF47E750458ED02ABF3 /* Pods-GhProfile-GhProfileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhProfile-GhProfileUITests.release.xcconfig"; path = "Target Support Files/Pods-GhProfile-GhProfileUITests/Pods-GhProfile-GhProfileUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,8 +165,9 @@
 		7970DF6326154B620094B1D8 /* GhProfileTests */ = {
 			isa = PBXGroup;
 			children = (
-				7970DF6426154B620094B1D8 /* GhProfileTests.swift */,
+				79D411B82615F64B00EBE41B /* profile */,
 				7970DF6626154B620094B1D8 /* Info.plist */,
+				79D411B32615F5A500EBE41B /* RepositoryMock.swift */,
 			);
 			path = GhProfileTests;
 			sourceTree = "<group>";
@@ -233,6 +236,14 @@
 				79D4118D2615DC7A00EBE41B /* Ext+String.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		79D411B82615F64B00EBE41B /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				7970DF6426154B620094B1D8 /* ProfilePresenterTests.swift */,
+			);
+			path = profile;
 			sourceTree = "<group>";
 		};
 		984A8327057EB7CB04982FF7 /* Frameworks */ = {
@@ -539,7 +550,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7970DF6526154B620094B1D8 /* GhProfileTests.swift in Sources */,
+				7970DF6526154B620094B1D8 /* ProfilePresenterTests.swift in Sources */,
+				79D411B42615F5A500EBE41B /* RepositoryMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
